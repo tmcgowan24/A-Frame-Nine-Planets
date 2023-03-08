@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>L15 - Animating objects</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@436d40c/dist/aframe-extras.min.js"></script>
+    
+</head>
+
+<body>
+
+    <a-scene>
+        <!-- Motion -->
+        <a-entity id="rig" movement-controls="fly: true; speed: 0.3">
+            <a-entity camera position="0 1.6 0" look-controls>
+            </a-entity>
+        </a-entity>
+
+       
+
+        <a-assets>
+            <img id="sun" src="assets/sun.png">
+
+            <img id="mercury.png" src="assets/mercury.png">
+
+            <img id="venus.png" src="assets/venus.png">
+
+            <img id="earth.png" src="assets/earth.png">
+
+            <img id="Mars.png" src="assets/mars.png">
+
+            <img id="jupiter.png" src="assets/jupiter.png">
+
+            <img id="saturn.png" src="assets/saturn.png">
+
+            <img id="uranus.png" src="assets/Uranus.png">
+
+            <img id="neptune.png" src="assets/neptune.png">
+
+            <img id="pluto.png" src="assets/pluto.png">
+
+            <img id="space" src="assets/space.png">
+
+        </a-assets>
+
+
+<a-sky
+src="#space">
+
+
+</a-sky>
+
+
+        <!-- Camera -->
+        <a-entity position="0 1.6 15">
+            <a-camera></a-camera>
+        </a-entity>
+
+
+        <!-- sun -->
+        <a-entity animation="property: rotation; to:0 360 0; loop: true; dur: 7000; easing: linear" rotation="0 0 0">
+            <a-sphere scale="8 8 8" position="0 1 0" img src="#sun"></a-sphere>
+        </a-entity>
+
+        <!-- Mercury -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 7000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="0.48 0.48 0.48" position="-20 1 0" img src="#mercury.png"></a-sphere>
+        </a-entity>
+
+        <!-- Venus -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 8000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="1.21 1.21 1.21" position="25 1 0" img src="#venus.png"></a-sphere>
+        </a-entity>
+
+
+        <!-- Earth -->
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 9000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="1.27 1.27 1.27" position="-29 1 0" img src="#earth.png"></a-sphere>
+
+            <a-entity position="-29 1 0" animation="property: rotation;
+                            to:0 360 0;
+                            loop: true;
+                            dur: 3000;
+                            easing: linear" rotation="0 0 0">
+        <a-sphere scale=".2 .2 .2" position="1.5 .5 0" img src="#mercury.png"></a-sphere>
+        </a-entity>
+
+        </a-entity>
+
+
+        <!-- Mars -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 9500;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="0.679 0.679 0.679" position="37 1 0" img src="#mars.png"></a-sphere>
+        </a-entity>
+
+        <!-- Jupiter -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 17000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="14.2 14.2 14.2" position="-92 1 0" img src="#jupiter.png"></a-sphere>
+        </a-entity>
+
+        <!-- Saturn -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 29000;
+easing: linear" rotation="45 25 0">
+            <a-sphere scale="12.05 12.05 12.05" position="157 1 0" img src="#saturn.png"></a-sphere>
+
+            
+            <a-entity position="157 0 0" rotation="90 0 0" >
+            <a-ring side="double" radius-inner="12.5" radius-outer="16" >
+                
+
+
+            </a-ring>
+
+
+
+
+        </a-entity>
+
+
+
+
+        </a-entity>
+
+        <!-- Uranus -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 85000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="5.11 5.11 5.11" position="-302 1 0" img src="#uranus.png"></a-sphere>
+        </a-entity>
+
+        <!-- Neptune -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 165000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="4.95 4.95 4.95" position="464 1 0" img src="#neptune.png"></a-sphere>
+        </a-entity>
+
+        <!-- Pluto -->
+
+        <a-entity animation="property: rotation;
+to:0 360 0;
+loop: true;
+dur: 248000;
+easing: linear" rotation="0 0 0">
+            <a-sphere scale="3 3 3" position="-500 1 0" img src="#pluto.png"></a-sphere>
+        </a-entity>
+
+
+
+
+
+   
+    </a-scene>
+</body>
+
+</html>
